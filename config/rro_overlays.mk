@@ -16,7 +16,6 @@
 
 # RRO Overlays
 PRODUCT_PACKAGES += \
-    AlphaConfigOverlay \
     PixelLauncherIconsOverlay
 
 # Google Overlays
@@ -49,6 +48,11 @@ PRODUCT_PACKAGES += \
     TelephonyProviderOverlay \
     WildlifeSettingsVpnOverlay2022 \
     WildlifeSysuiVpnOverlay2022 \
+    ClearCallingSettingsOverlay2022 \
+    CarrierSettingsConfigOverlay \
+    CarrierSettingsOverlay \
+    CarrierSettingsProviderOverlay \
+    CarrierSettingsSystemUIOverlay \
     ClearCallingSettingsOverlay2022 \
     ManagedProvisioningPixelOverlay \
     NowPlayingOverlay \
