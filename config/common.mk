@@ -263,10 +263,10 @@ include vendor/lineage/config/version.mk
 $(call inherit-product, vendor/lineage/config/rro_overlays.mk)
 
 # GMS
-#ifeq ($(WITH_GMS),true)
-#BUILD_GMS_OVERLAYS_AND_PROPS := true
-#$(call inherit-product, vendor/gms/gms_full.mk)
-#endif
+ifeq ($(WITH_GMS),true)
+BUILD_GMS_OVERLAYS_AND_PROPS := true
+$(call inherit-product, vendor/gms/gms_full.mk)
+endif
 
 # Face Unlock
 
