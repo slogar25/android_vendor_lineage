@@ -258,14 +258,10 @@ include vendor/lineage/config/version.mk
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/lineage/config/partner_gms.mk
 
-
-# Inherit from rro_overlays config
-$(call inherit-product, vendor/lineage/config/rro_overlays.mk)
-
 # GMS
 ifeq ($(WITH_GMS),true)
 BUILD_GMS_OVERLAYS_AND_PROPS := true
-#$(call inherit-product, vendor/gms/gms_full.mk)
+$(call inherit-product, vendor/gms/gms_full.mk)
 endif
 
 # Face Unlock
