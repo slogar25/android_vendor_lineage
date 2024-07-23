@@ -218,6 +218,7 @@ endif
 
 # SystemUI
 PRODUCT_DEXPREOPT_SPEED_APPS += \
+    Settings \
     CarSystemUI \
     SystemUI
 
@@ -265,7 +266,6 @@ $(call inherit-product, vendor/gms/gms_full.mk)
 endif
 
 # Face Unlock
-
 ifeq ($(TARGET_SUPPORTS_64_BIT_APPS),true)
 TARGET_FACE_UNLOCK_SUPPORTED ?= true
 
