@@ -266,7 +266,7 @@ include vendor/lineage/config/version.mk
 # GMS
 ifeq ($(WITH_GMS),true)
 BUILD_GMS_OVERLAYS_AND_PROPS := true
-$(call inherit-product, vendor/gms/gms_full.mk)
+$(call inherit-product, vendor/gms/products/gms.mk)
 endif
 
 # Face Unlock
