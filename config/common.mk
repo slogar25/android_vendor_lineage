@@ -224,17 +224,6 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/bin/getcap \
     system/bin/setcap
 
-ifeq ($(TARGET_SUPPORTS_64_BIT_APPS),true)
-PRODUCT_PACKAGES += \
-    FaceUnlock
-
-PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    ro.face.sense_service=true
-
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/android.hardware.biometrics.face.xml
-endif
-
 # Filesystems tools
 PRODUCT_PACKAGES += \
     fsck.ntfs \
@@ -412,7 +401,7 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.arm64.memtag.app.com.google.android.bluetooth=off \
     persist.arm64.memtag.app.com.android.nfc=off \
     persist.arm64.memtag.process.system_server=off
-    
+
 include vendor/lineage/config/version.mk
 
 -include vendor/lineage-priv/keys/keys.mk
