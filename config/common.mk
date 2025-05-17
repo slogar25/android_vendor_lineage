@@ -1,20 +1,6 @@
 # Allow vendor/extra to override any property by setting it first
 $(call inherit-product-if-exists, vendor/extra/product.mk)
 include vendor/rising/config/rising.mk
-ifeq ($(WITH_PIXEL_OVERLAYS),true)
-$(call inherit-product-if-exists, vendor/pixeloverlays/config.mk)
-endif
-
-# Pixel additions
-ifeq ($(WITH_GMS),true)
-$(call inherit-product, vendor/google/overlays/ThemeIcons/config.mk)
-$(call inherit-product, vendor/pixel-framework/config.mk)
-$(call inherit-product, vendor/pixel-style/config/common.mk)
-
-# Don't dexpreopt prebuilts. (For GMS).
-DONT_DEXPREOPT_PREBUILTS := true
-PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
-endif
 
 # Bypass Charge
 BYPASS_CHARGE_SUPPORTED ?= false
